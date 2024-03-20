@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador de Texto</title> 
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    </head>
+
+    <body>
+        <header>
+            <div class="caja-logo">
+                <img class="logo" src="imagenes/Logo.png">
+            </div>
+        </header>
+        <main>
+            <div class="contenedor">
+                <div class="ingresar-mensaje" id="ingresar-mensaje">
+                    <textarea placeholder="Ingrese el texto aqui" id="mensaje" class="input-mensaje"></textarea>            
+                    <div class="caja-botones">                    
+                        <img src="imagenes/simbolo.png"> 
+                        <span> Solo letras minúsculas y sin acentos</span>
+                        <div class="botones">
+                            <button onclick="encriptar()" class="encriptar">Encriptar</button>
+                            <button onclick="desencriptacion()" class="desencriptar">Desencriptar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class = "caja">
+                    <div class="ocultar-imagen" id="ocultar-imagen">
+                        <img class="munheco" src="imagenes/Muñeco.png" >
+                        <h3>Ningún mensaje fue encontrado</h3>
+                        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </div>
+                    <div hidden class="resultado-mensaje" id="resultado-mensaje">
+                        <textarea type="text" id="mensajeResultado" class="input-resultado"></textarea>
+                        <button onclick="copiar()" class="copiar" >Copiar</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
